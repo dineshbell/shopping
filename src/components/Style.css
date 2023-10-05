@@ -33,6 +33,7 @@
 
 .home {
   display: flex;
+  background-color: rgba(72, 66, 66, 0.854);
 }
 
 .filters {
@@ -65,6 +66,7 @@
 .products {
   width: 30%;
   margin: 10px;
+ 
 }
 
 .summary {

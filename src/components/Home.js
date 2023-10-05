@@ -1,6 +1,7 @@
 import { CartState } from "../context/context";
 import Filters from "./Filter";
 import SingleProduct from "./Singleproduct";
+import Header from "./Header";
 
 const Home = () => {
   const {
@@ -41,12 +42,15 @@ const Home = () => {
   };
 
   return (
-    <div className="home">
-      <Filters />
-      <div className="productContainer">
-        {transformProducts().map((prod) => (
-          <SingleProduct prod={prod} key={prod.id} />
-        ))}
+    <div>
+      <Header />
+      <div className="home">
+        <Filters />
+        <div className="productContainer">
+          {transformProducts().map((prod) => (
+            <SingleProduct prod={prod} key={prod.id} />
+          ))}
+        </div>
       </div>
     </div>
   );

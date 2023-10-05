@@ -3,8 +3,9 @@ import { Button, Col, Form, Image, ListGroup, Row } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
 import { CartState } from "../context/context";
 import Rating from "./Rating";
-
+import Header from "./Header";
 const Cart = () => {
+ 
   const {
     state: { cart },
     dispatch,
@@ -18,6 +19,8 @@ const Cart = () => {
   }, [cart]);
 
   return (
+    <div>
+      <Header/>
     <div className="home">
       <div className="productContainer">
         <ListGroup>
@@ -79,6 +82,7 @@ const Cart = () => {
           Proceed to Checkout
         </Button>
       </div>
+    </div>
     </div>
   );
 };

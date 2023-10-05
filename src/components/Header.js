@@ -24,7 +24,7 @@ const Header = () => {
     <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
       <Container>
         <Navbar.Brand>
-          <Link to="/">Shopping Cart</Link>
+          <Link to="/Home">Shopping Cart</Link>
         </Navbar.Brand>
         {useLocation().pathname.split("/")[1] !== "cart" && (
           <Navbar.Text className="search">
@@ -44,10 +44,12 @@ const Header = () => {
           </Navbar.Text>
         )}
         <Nav>
-          <Dropdown  align="end">
+          <Dropdown align="end">
             <Dropdown.Toggle variant="success">
               <FaShoppingCart color="white" fontSize="25px" />
-              <Badge bg="success" variant="light">{cart.length}</Badge>
+              <Badge bg="success" variant="light">
+                {cart.length}
+              </Badge>
             </Dropdown.Toggle>
 
             <Dropdown.Menu style={{ minWidth: 370 }}>
@@ -87,6 +89,19 @@ const Header = () => {
               )}
             </Dropdown.Menu>
           </Dropdown>
+          <Link to="/">
+            <Button
+              style={{
+                width: "85%",
+                margin: "0 10px",
+                background: "red",
+                border: "0px",
+                padding: "8.5px",
+              }}
+            >
+              Log Out
+            </Button>
+          </Link>
         </Nav>
       </Container>
     </Navbar>
